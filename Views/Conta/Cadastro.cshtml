@@ -1,0 +1,39 @@
+@model SistemaEscolar.Models.Usuario
+
+<h2 class="text-center mt-4">Criar Conta</h2>
+
+<div class="card shadow mx-auto mt-3" style="max-width: 500px;">
+    <div class="card-body">
+        <form asp-action="Cadastro">
+
+            <div class="mb-3">
+                <label asp-for="Nome" class="form-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Senha" class="form-label"></label>
+                <input asp-for="Senha" type="password" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label>Tipo de Conta</label>
+                <select asp-for="Tipo" class="form-control">
+                    <option value="Aluno">Aluno</option>
+                    <option value="Professor">Professor</option>
+                </select>
+            </div>
+
+            <button class="btn btn-success w-100 mt-2">Cadastrar</button>
+
+        </form>
+    </div>
+</div>
